@@ -1,0 +1,12 @@
+# Keep secrets secret
+.env
+*.db
+
+# Node build artifacts  
+node_modules/
+dist/
+
+# OS/IDE junk
+.DS_Store
+.vscode/
+*.swp
