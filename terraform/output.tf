@@ -11,6 +11,3 @@ output "application_url" {
   value = "https://memos-app-ecs.com"
 }
 
-output "name_servers" {
-  value = module.route_53.name_servers
-}
