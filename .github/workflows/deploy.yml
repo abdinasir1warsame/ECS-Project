@@ -27,13 +27,19 @@ jobs:
         run: terraform fmt -check -recursive
         working-directory: terraform/
 
-      - name: Terraform Lint
-        uses: terraform-linters/tflint-action@v1
+      # Fixed: Use setup-tflint action and then run tflint
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v4
         with:
-          working_directory: terraform/
+          tflint_version: v0.50.3
 
+      - name: Run TFLint
+        run: tflint -f compact
+        working-directory: terraform/
+
+      # Fixed: Use snyk/actions/iac@master (correct version)
       - name: Snyk Security Scan
-        uses: snyk/actions/iac@v0.6.0
+        uses: snyk/actions/iac@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
@@ -108,7 +114,7 @@ jobs:
         run: terraform init
         working-directory: terraform/
 
-      - name: Terraform Apply (requires approval)
+      - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
         working-directory: terraform/
         env:
