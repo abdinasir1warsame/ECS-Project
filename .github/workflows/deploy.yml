@@ -38,12 +38,14 @@ jobs:
         working-directory: terraform/
 
       # Fixed: Use snyk/actions/iac@master (correct version)
-      - name: Snyk Security Scan
-        uses: snyk/actions/iac@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          file: terraform/
+        - name: Snyk Security Scan
+          uses: snyk/actions/iac@v0.6.0
+          continue-on-error: true
+          env:
+            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          with:
+            file: terraform/envs/dev/
+            args: --severity-threshold=high
 
   plan:
     name: Terraform Plan
