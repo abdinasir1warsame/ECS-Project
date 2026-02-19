@@ -64,7 +64,7 @@ resource "aws_security_group" "frontend-task-sg" {
     description = "Allow all outbound traffic"
     from_port   = 0
     to_port     = 0
-    protocol    = "-1" # All protocols
+    protocol    = "-1" # All protocol's
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
