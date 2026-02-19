@@ -10,3 +10,9 @@ dist/
 .DS_Store
 .vscode/
 *.swp
+
+# Ignore the app directory and its contents
+app/
+
+# Ignore Terraform local state and providers
+.terraform/
