@@ -78,3 +78,10 @@ resource "aws_lb_listener" "backend_listener" {
     target_group_arn = aws_lb_target_group.backend_target_group.arn
   }
 }
+resource "aws_lb_target_group" "backend_target_group" {
+  name        = "backend-tg"
+  port        = 8081
+  protocol    = "HTTP"
+  vpc_id      = var.vpc_id
+  target_type = "ip"
+}

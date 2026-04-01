@@ -3,5 +3,5 @@ output "certificate_arn" {
 }
 
 output "zone_id" {
-  value = aws_route53_zone.main.zone_id
+  value = "Z0597504WBYW8GGB4VTX"
 }

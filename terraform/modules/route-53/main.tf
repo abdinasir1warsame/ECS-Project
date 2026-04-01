@@ -26,8 +26,8 @@ resource "aws_route53_record" "app" {
   name    = "memos-app-ecs.com"
   type    = "A"
   alias {
-    name                   = module.alb.frontend_alb_dns_name
-    zone_id                = module.alb.frontend_alb_zone_id
+    name                   = var.alb_dns
+    zone_id                = var.alb_zone_id
     evaluate_target_health = true
   }
 }

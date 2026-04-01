@@ -11,6 +11,17 @@ output "application_url" {
   value = "https://memos-app-ecs.com"
 }
 
-output "name_servers" {
-  value = module.route_53.name_servers
+variable "domain_name" {
+  description = "Domain name for the application"
+  type        = string
+  default     = "memos-app-ecs.com"
+}
+
+variable "tags" {
+  description = "Tags to apply to resources"
+  type        = map(string)
+  default = {
+    Environment = "production"
+    Project     = "memos-app"
+  }
 }
