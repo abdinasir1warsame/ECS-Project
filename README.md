@@ -198,17 +198,15 @@ Visit https://memos-app-ecs.com and allow a few minutes for ACM certificate vali
 
 Application running live on https://memos-app-ecs.com
 
-| Login Page                         | Dashboard (after login)           |
-| ---------------------------------- | --------------------------------- |
-| ![](./images/memos-login-page.png) | ![](./images/memos-dashboard.png) |
+| Login Page                                            | Dashboard (after login)                              |
+| ----------------------------------------------------- | ---------------------------------------------------- |
+| <img src="./images/memos-login-page.png" width="600"> | <img src="./images/memos-dashboard.png" width="600"> |
 
 ### CI/CD Workflows
 
-| Terraform Apply (success)        | Terraform Destroy (manual)         |
-| -------------------------------- | ---------------------------------- |
-| ![](./images/apply-workflow.png) | ![](./images/destroy-workflow.png) |
-
-(Add your own screenshots to the `images/` folder.)
+| Terraform Apply (success)                            | Terraform Destroy (manual)                             |
+| ---------------------------------------------------- | ------------------------------------------------------ |
+| <img src="./images/terraform_apply.png" width="600"> | <img src="./images/terraform_destroy.png" width="600"> |
 
 ---
 
