@@ -2,7 +2,7 @@
 
 A complete, production-style deployment of the open-source note-taking platform Memos on AWS. The application is containerized with Docker, infrastructure is defined as code with Terraform, and a CI/CD pipeline automates builds and deployments.
 
-**Live URL:** https://memos-app-ecs.com
+Project URL: https://memos-app-ecs.com (deployed on demand)
 
 ---
 
@@ -188,15 +188,9 @@ in repository settings.
 Push to `main` to trigger the Terraform Apply workflow automatically, or run it manually
 from the Actions tab.
 
-### 5. Verify
-
-Visit https://memos-app-ecs.com and allow a few minutes for ACM certificate validation.
-
----
-
 ## Screenshots (Application + Workflows)
 
-Application running live on https://memos-app-ecs.com
+Application when deployed at https://memos-app-ecs.com
 
 | Login Page                                            | Dashboard (after login)                              |
 | ----------------------------------------------------- | ---------------------------------------------------- |

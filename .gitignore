@@ -16,3 +16,5 @@ app/
 
 # Ignore Terraform local state and providers
 .terraform/
+# Ignore Secrets
+terraform/secrets.tf
